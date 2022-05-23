@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .calculator {
+        border: 1px solid #ccc;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 100px;
+      }
+
+      .screen-history,
+      .screen-current,
+      .screen-result {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: right;
+      }
+      .screen-history {
+        min-height: 100px;
+        height: 100px;
+        overflow-y: auto;
+      }
+
+      .screen-current {
+        min-height: 40px;
+      }
+
+      button {
+        padding: 20px;
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .ac {
+        grid-column: span 5;
+      }
+
+      .number {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .edit-mode {
+        background-color: rgb(137, 137, 236);
+      }
+    </style>
+
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="screen">
+        <div class="screen-history"></div>
+        <div class="screen-current">
+          <span
+            id="firstOperands"
+            class="screen-current-operation-operands-1st screen-current-operation-operands number"
+          ></span>
+          <span class="screen-current-operation-operator number"></span>
+          <span
+            id="secondOperands"
+            class="screen-current-operation-operands-2nd screen-current-operation-operands number"
+          ></span>
+        </div>
+
+        <div class="screen-result number"></div>
+      </div>
+
+      <div class="controls">
+        <button class="operand">1</button>
+        <button class="operand">2</button>
+        <button class="operand">3</button>
+        <button class="operand">4</button>
+        <button class="operand">5</button>
+        <button class="operand">6</button>
+        <button class="operand">7</button>
+        <button class="operand">8</button>
+        <button class="operand">9</button>
+        <button class="operand">0</button>
+
+        <button class="operator">-</button>
+        <button class="operator">+</button>
+        <button class="operator">*</button>
+        <button class="operator">/</button>
+
+        <button class="equals">=</button>
+        <button class="ac">AC</button>
+      </div>
+    </div>
+  </body>
+</html>
